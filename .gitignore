@@ -9,3 +9,5 @@
 *.pyc
 *.html
 *.xlm
+*.xml
+*.ipynb

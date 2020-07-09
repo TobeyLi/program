@@ -10,4 +10,4 @@
 *.html
 *.xlm
 *.xml
-*.ipynb
+*-checkpoint.ipynb

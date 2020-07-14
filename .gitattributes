@@ -7,3 +7,4 @@
 pytorch/data/ptb/*.txt filter=lfs diff=lfs merge=lfs -text
 pytorch/data/pretrain_models/*.txt filter=lfs diff=lfs merge=lfs -text
 pytorch/data/pretrain_models/*.bin filter=lfs diff=lfs merge=lfs -text
+*.tar.gz filter=lfs diff=lfs merge=lfs -text

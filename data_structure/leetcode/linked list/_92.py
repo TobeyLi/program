@@ -40,7 +40,7 @@ class Solution:
             tail=node
         return res.next
 
-    def reverseBetween_1(self, head: ListNode, m: int, n: int) -> ListNode:
+    def reverseBetweenPointer(self, head: ListNode, m: int, n: int) -> ListNode:
         """
         不借助额外的数组，只是需要再新建一个节点和头插法进行结合起来，时间复杂度O(n),空间复杂度O(1)
         :param head:

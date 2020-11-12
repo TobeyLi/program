@@ -7,6 +7,8 @@
 # 比如例子中的2->3,那么不仅要把2的左孩子4指向右孩子5，还要把2的右孩子5指向2的next节点的左孩子6。这样递归完成了，
 # 每层就是单链表了。
 
+import collections
+
 # 定义的是一个完美二叉树的节点
 class Node:
     def __init__(self,val,left=None,right=None,next=None):
@@ -28,4 +30,21 @@ class Solution:
                 root.right.next = root.next.left
         self.connect(root.left)
         self.connect(root.right)
+        return root
+
+    def connectQueue(self,root:Node):
+        if not root:
+            return
+        queue=collections.deque()
+        queue.append(root)
+        while queue:
+            lenQueue=len(queue)
+            for i in range(lenQueue):
+                node=queue.popleft()
+                if i < lenQueue - 1:
+                    node.next = queue[0]
+                if node.left:
+                    queue.append(node.left)
+                if node.right:
+                    queue.append(node.right)
         return root
